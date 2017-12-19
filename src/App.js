@@ -17,15 +17,13 @@ class App extends Component {
     return (
       <div className="App">
         <h3>ToDo</h3>
-        <ul>
-          {this.state.todos.map((todo, index) => {
-            return <ToDo
-              key={index}
-              description={todo.description}
-              isCompleted={todo.isCompleted}
-            />
-          })}
-        </ul>
+        {this.state.todos.map((todo, index) => {
+          return <ToDo
+            key={index}
+            description={todo.description}
+            isCompleted={todo.isCompleted}
+                 />
+        })}
       </div>
     );
   }
