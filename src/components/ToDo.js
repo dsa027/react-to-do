@@ -11,6 +11,9 @@ class ToDo extends Component {
             onChange={this.props.toggleComplete}
           />
           <span>{this.props.description}</span>
+          <button style={{'marginLeft': '5px'}} type='submit' onClick={this.props.deleteToDo}>
+            Delete
+          </button>
         </li>
       </ul>
     );

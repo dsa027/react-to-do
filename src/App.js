@@ -37,6 +37,11 @@ class App extends Component {
         ],
         newTask: ''})
   }
+  deleteToDo(index) {
+    let todos = this.state.todos;
+    todos.splice(index, 1);
+    this.setState({todos: todos});
+  }
   render() {
     return (
       <div className="App">
@@ -49,6 +54,7 @@ class App extends Component {
                 description={todo.description}
                 isCompleted={todo.isCompleted}
                 toggleComplete={() => this.toggleComplete(index)}
+                deleteToDo={() => this.deleteToDo(index)}
               />
             )
           })}
